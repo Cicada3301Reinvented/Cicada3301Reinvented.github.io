@@ -24,40 +24,85 @@
       .timer {
         display: inline-block;
         color: white;
-        border: 2px solid white;
-        font-size: 1.3rem;
-        border-radius: 50%;
-        margin: 8px;
+        margin: 2rem;
         width: 7rem;
         height: 7rem;
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
       }
-      @media only screen and (max-width: 760px) {
+      .timer span:first-child {
+        font-size: 5rem;
+        background: linear-gradient(#c70039, #ff5733 70%);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .timer span + span {
+        font-size: 2rem;
+      }
+
+      .timer-title {
+        position: relative;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+      .timer-title:after {
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, #c70039, #ff5733 70%);
+        position: absolute;
+      }
+
+      @media only screen and (max-width: 780px) {
         .timer {
           width: 5rem;
           height: 5rem;
-          margin: 6px;
+          margin: 1rem;
+          font-size: 1rem;
+        }
+        .timer span:first-child {
+          font-size: 4rem;
+        }
+        .timer span + span {
+          font-size: 1.5rem;
+        }
+      }
+      @media only screen and (max-width: 510px) {
+        .timer {
+          width: 3rem;
+          margin: 1rem;
+          border: none;
+        }
+        .timer-title {
+          font-size: 1.5rem;
+        }
+        .timer span:first-child {
+          font-size: 3rem;
+        }
+        .timer span + span {
           font-size: 1rem;
         }
       }
-      @media only screen and (max-width: 420px) {
+      @media only screen and (max-width: 380px) {
         .timer {
-          width: 3.3rem;
-          margin: 6px;
-          font-size: 1rem;
+          width: 2.5rem;
+          margin: 0.5rem;
           border: none;
         }
+        .timer-title {
+          font-size: 1rem;
+        }
         .timer span:first-child {
-          border: 2px solid white;
-          border-radius: 50%;
-          width: 2.8rem;
-          height: 2.8rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          font-size: 2rem;
+        }
+        .timer span + span {
+          font-size: 0.8rem;
         }
       }
     </style>
@@ -152,23 +197,36 @@
       </div>
 
       <!-- countdown timer -->
-      <div class="my-5 container" data-aos="fade-right" data-aos-delat="200">
-        <p style="font-size: 1.5rem">Hackathon Starts In:</p>
-        <div class="timer">
-          <span id="timer-days"></span>
-          <span>Days</span>
-        </div>
-        <div class="timer">
-          <span id="timer-hours"></span>
-          <span>Hours</span>
-        </div>
-        <div class="timer">
-          <span id="timer-minutes"></span>
-          <span>Minutes</span>
-        </div>
-        <div class="timer">
-          <span id="timer-seconds"></span>
-          <span>Seconds</span>
+      <div
+        class="
+          my-5
+          container-fluid
+          d-flex
+          justify-content-center
+          align-items-center
+        "
+        data-aos="fade-right"
+        data-aos-delat="200"
+        style="flex-direction: column"
+      >
+        <p class="timer-title">Hackathon Starts In...</p>
+        <div>
+          <div class="timer">
+            <span id="timer-days"></span>
+            <span>Days</span>
+          </div>
+          <div class="timer">
+            <span id="timer-hours"></span>
+            <span>Hours</span>
+          </div>
+          <div class="timer">
+            <span id="timer-minutes"></span>
+            <span>Minutes</span>
+          </div>
+          <div class="timer">
+            <span id="timer-seconds"></span>
+            <span>Seconds</span>
+          </div>
         </div>
       </div>
 
@@ -993,7 +1051,7 @@
             </div>
           </div>
 
-          <div class="mx-auto my-5 mb-lg-0 text-center">
+          <div class="mx-auto my-4 text-center">
             <h2>Associate Sponsors</h2>
             <div class="d-flex justify-content-center flex-wrap">
               <a
@@ -1051,13 +1109,19 @@
           </div>
           <br /><br />
 
-          <h2 class="text-center my-4">Technical Sponsors</h2>
+          <h2 class="text-center mb-5">Technical Sponsors</h2>
           <div
             class="row mb-5 d-flex flex-wrap"
             style="justify-content: space-evenly"
           >
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-4
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1073,7 +1137,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delat="200"
             >
@@ -1089,7 +1159,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delat="200"
             >
@@ -1105,7 +1181,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delat="200"
             >
@@ -1121,7 +1203,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delat="200"
             >
@@ -1137,7 +1225,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delat="200"
             >
@@ -1153,7 +1247,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1169,7 +1269,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-4
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1185,7 +1291,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1200,7 +1312,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1216,7 +1334,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1232,7 +1356,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1248,7 +1378,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1264,10 +1400,15 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
-              style="margin-top: 1.4rem"
             >
               <a
                 href="https://edubard.in/"
@@ -1281,7 +1422,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
@@ -1297,7 +1444,13 @@
               /></a>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-5 mb-lg-0"
+              class="
+                col-md-6 col-lg-4
+                mb-5
+                d-flex
+                justify-content-center
+                align-items-center
+              "
               data-aos="fade"
               data-aos-delay="200"
             >
