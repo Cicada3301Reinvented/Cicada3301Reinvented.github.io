@@ -92,7 +92,7 @@
       @media only screen and (max-width: 380px) {
         .timer {
           width: 2.5rem;
-          margin: 0.5rem;
+          margin: 0.6rem;
           border: none;
         }
         .timer-title {
@@ -102,7 +102,7 @@
           font-size: 2.5rem;
         }
         .timer span + span {
-          font-size: 1rem;
+          font-size: 0.9rem;
         }
       }
     </style>
@@ -915,10 +915,7 @@
                   data-aos="fade-right"
                   data-aos-delay="200"
                 >
-                  <a
-                    href="https://www.linkedin.com/in/sanketpatelrf/"
-                    style="color: aqua"
-                    target="_blank"
+                  <a href="#" style="color: aqua" target="_blank"
                     >Mr. Rajni Kant</a
                   >
                 </h2>
@@ -1741,16 +1738,27 @@
       setInterval(() => {
         let date = new Date();
         let diff = finalDate - date;
-        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        let hours = Math.floor(
-          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-        timerDays.innerHTML = days;
-        timerHours.innerHTML = hours;
-        timerMinutes.innerHTML = minutes;
-        timerSeconds.innerHTML = seconds;
+        if (diff > 0) {
+          let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          days = days < 10 ? "0" + days : days;
+          let hours = Math.floor(
+            (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          hours = hours < 10 ? "0" + hours : hours;
+          let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+          timerDays.innerHTML = days;
+          timerHours.innerHTML = hours;
+          timerMinutes.innerHTML = minutes;
+          timerSeconds.innerHTML = seconds;
+        } else {
+          timerDays.innerHTML = "00";
+          timerHours.innerHTML = "00";
+          timerMinutes.innerHTML = "00";
+          timerSeconds.innerHTML = "00";
+        }
       }, 1000);
     </script>
 
