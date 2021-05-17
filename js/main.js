@@ -98,3 +98,33 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// Countdown Timer
+let finalDate = new Date(2021, 04, 28, 20, 0, 0);
+let timerDays = document.getElementById("timer-days");
+let timerHours = document.getElementById("timer-hours");
+let timerMinutes = document.getElementById("timer-minutes");
+let timerSeconds = document.getElementById("timer-seconds");
+setInterval(() => {
+  let date = new Date();
+  let diff = finalDate - date;
+  if (diff > 0) {
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    days = days < 10 ? "0" + days : days;
+    let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    hours = hours < 10 ? "0" + hours : hours;
+    let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    timerDays.innerHTML = days;
+    timerHours.innerHTML = hours;
+    timerMinutes.innerHTML = minutes;
+    timerSeconds.innerHTML = seconds;
+  } else {
+    timerDays.innerHTML = "00";
+    timerHours.innerHTML = "00";
+    timerMinutes.innerHTML = "00";
+    timerSeconds.innerHTML = "00";
+  }
+}, 1000);
