@@ -128,3 +128,60 @@ setInterval(() => {
     timerSeconds.innerHTML = "00";
   }
 }, 1000);
+
+(function ($) {
+  "use strict";
+
+  var fullHeight = function () {
+    $(".js-fullheight").css("height", $(window).height());
+    $(window).resize(function () {
+      $(".js-fullheight").css("height", $(window).height());
+    });
+  };
+  fullHeight();
+
+  var carousel = function () {
+    $(".featured-carousel").owlCarousel({
+      loop: false,
+      autoplay: true,
+      margin: 30,
+      animateOut: "fadeOut",
+      animateIn: "fadeIn",
+      nav: false,
+      dots: true,
+      autoplayHoverPause: true,
+      items: 1,
+      navText: [
+        "<span class='ion-ios-arrow-back'></span>",
+        "<span class='ion-ios-arrow-forward'></span>",
+      ],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 2,
+        },
+        1000: {
+          items: 3,
+        },
+      },
+    });
+  };
+  carousel();
+})(jQuery);
+
+let flipcards = document.getElementsByClassName("flip-card");
+let flipcardsArray = Array.from(flipcards);
+flipcardsArray.forEach((card) => {
+  card.addEventListener("click", (e) => {
+    if (e.target.classList[0] != "session-btn") {
+      let a = e.currentTarget.getElementsByClassName("flip-card-inner")[0];
+      if (a.style.transform == "rotateY(180deg)") {
+        a.style.transform = "rotateY(0deg)";
+      } else {
+        a.style.transform = "rotateY(180deg)";
+      }
+    }
+  });
+});

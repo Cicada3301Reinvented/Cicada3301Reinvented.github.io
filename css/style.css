@@ -1468,3 +1468,193 @@ form button {
     width: 60%;
   }
 }
+
+/* ********************************* Carousel ********************* */
+.owl-carousel {
+  position: relative;
+}
+.owl-carousel .owl-stage-outer {
+  padding-top: 1.5em;
+  position: relative;
+}
+.owl-carousel .owl-item {
+  opacity: 1;
+}
+.owl-carousel .owl-item.active {
+  opacity: 1;
+}
+.owl-carousel .owl-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-top: -10px;
+  color: rgba(0, 0, 0, 0.2) !important;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+.owl-carousel .owl-nav .owl-prev span:before,
+.owl-carousel .owl-nav .owl-next span:before {
+  font-size: 16px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .owl-carousel .owl-nav .owl-prev span:before,
+  .owl-carousel .owl-nav .owl-next span:before {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+.owl-carousel .owl-nav .owl-prev:hover span:before,
+.owl-carousel .owl-nav .owl-next:hover span:before {
+  color: #83b582;
+}
+.owl-carousel .owl-nav .owl-prev {
+  right: 0;
+  margin-right: 20px;
+}
+.owl-carousel .owl-nav .owl-next {
+  right: 0;
+}
+.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.owl-carousel .owl-dots .owl-dot {
+  width: 20px;
+  height: 3px;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  border-radius: 1px;
+}
+.owl-carousel .owl-dots .owl-dot:hover,
+.owl-carousel .owl-dots .owl-dot:focus {
+  outline: none !important;
+}
+.owl-carousel .owl-dots .owl-dot.active {
+  background: #fff;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+.testimony-wrap {
+  display: block;
+  background: white;
+  padding: 0 2rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.grab {
+  cursor: grab;
+}
+.grab:active {
+  cursor: grabbing;
+}
+.flip-card {
+  background-color: transparent;
+  width: 18rem;
+  height: 25rem;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .testimony-wrap {
+    padding: 1rem;
+  }
+  .flip-card {
+    width: 16rem;
+  }
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* .flip-card:hover .flip-card-inner { 
+        transform: rotateY(180deg);
+      } */
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background: -webkit-gradient(linear, from(#c70039), color-stop(70%, #ff5733));
+  background: -webkit-linear-gradient(#c70039, #ff5733 70%);
+  background: -o-linear-gradient(#c70039, #ff5733 70%);
+  background: linear-gradient(#c70039, #ff5733 70%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-weight: 500;
+}
+
+.session-title {
+  font-weight: 900;
+}
+
+.flip-card-back {
+  background-color: #fff;
+  overflow: hidden;
+  transform: rotateY(180deg);
+}
+
+.session-desc {
+  background: linear-gradient(#c70039, #ff5733 70%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.session-btn {
+  padding: 8px 0;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  border-radius: 25px;
+  width: 12rem;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
