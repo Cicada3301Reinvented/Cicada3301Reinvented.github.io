@@ -1634,8 +1634,9 @@ form button {
 
 .flip-card-back {
   background-color: #fff;
-  overflow: hidden;
+  overflow-y: scroll;
   transform: rotateY(180deg);
+  scrollbar-color: rgb(73, 73, 73) #fff;
 }
 
 .session-desc {
