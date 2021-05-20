@@ -1485,7 +1485,7 @@ form button {
 }
 .owl-carousel .owl-nav {
   position: absolute;
-  bottom: 0;
+  bottom: 50%;
   width: 100%;
 }
 .owl-carousel .owl-nav .owl-prev,
@@ -1494,8 +1494,7 @@ form button {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin-top: -10px;
-  color: rgba(0, 0, 0, 0.2) !important;
+  color: white !important;
   -webkit-transition: 0.7s;
   -o-transition: 0.7s;
   transition: 0.7s;
@@ -1529,11 +1528,10 @@ form button {
   color: #83b582;
 }
 .owl-carousel .owl-nav .owl-prev {
-  right: 0;
-  margin-right: 20px;
+  left: -30px;
 }
 .owl-carousel .owl-nav .owl-next {
-  right: 0;
+  right: -30px;
 }
 .owl-carousel .owl-dots {
   text-align: center;

@@ -147,23 +147,25 @@ setInterval(() => {
       margin: 30,
       animateOut: "fadeOut",
       animateIn: "fadeIn",
-      nav: false,
       dots: true,
       autoplayHoverPause: true,
       items: 1,
       navText: [
-        "<span class='ion-ios-arrow-back'></span>",
-        "<span class='ion-ios-arrow-forward'></span>",
+        "<span class='fa fa-arrow-left'></span>",
+        "<span class='fa fa-arrow-right'></span>",
       ],
       responsive: {
         0: {
           items: 1,
+          nav: false,
         },
         600: {
           items: 2,
+          nav: true,
         },
         1000: {
           items: 3,
+          nav: true,
         },
       },
     });
