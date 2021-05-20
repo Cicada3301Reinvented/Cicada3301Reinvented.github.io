@@ -142,7 +142,7 @@ setInterval(() => {
 
   var carousel = function () {
     $(".featured-carousel").owlCarousel({
-      loop: false,
+      loop: true,
       autoplay: true,
       margin: 30,
       animateOut: "fadeOut",
