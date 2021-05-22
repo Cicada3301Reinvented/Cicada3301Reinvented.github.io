@@ -1686,6 +1686,7 @@ form button {
   max-width: 350px;
   margin: 5px;
   height: 450px;
+  border-radius: 10px;
 }
 
 .panel-card article {
