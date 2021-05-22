@@ -1675,3 +1675,100 @@ form button {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
+
+/* ****************************** Panel Discussion ******************** */
+
+.panel-card {
+  background-color: rgba(57, 62, 93, 0.7);
+  padding: 0;
+  overflow: hidden;
+  max-width: 350px;
+  margin: 5px;
+  height: 450px;
+}
+
+.panel-card article {
+  padding: 10%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.panel-card h2 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 25px;
+  border-bottom: #fff solid 1px;
+}
+
+.panel-card h4 {
+  font-weight: 300;
+  color: #fff;
+  font-size: 16px;
+}
+
+.panel-card img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  -webkit-transition: all 4s ease;
+  -moz-transition: all 4s ease;
+  -o-transition: all 4s ease;
+  -ms-transition: all 4s ease;
+  transition: all 4s ease;
+}
+
+.panel-card-desc {
+  position: absolute;
+  width: 100%;
+  height: 320px;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(0px, 300px);
+  -webkit-transform: translate(0px, 300px);
+  -moz-transform: translate(0px, 300px);
+  -o-transform: translate(0px, 300px);
+  -ms-transform: translate(0px, 300px);
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  overflow-y: scroll;
+}
+
+.panel-card:hover {
+  cursor: pointer;
+}
+
+.panel-card:hover img {
+  opacity: 0.1;
+}
+
+.panel-card:hover article {
+  transform: translate(2px, -300px);
+  -webkit-transform: translate(2px, -300px);
+  -moz-transform: translate(2px, -300px);
+  -o-transform: translate(2px, -300px);
+  -ms-transform: translate(2px, -300px);
+}
+
+.panel-card:hover .panel-card-desc {
+  transform: translate(0px, -15px);
+  -webkit-transform: translate(0px, -15px);
+  -moz-transform: translate(0px, -15px);
+  -o-transform: translate(0px, -15px);
+  -ms-transform: translate(0px, -15px);
+  opacity: 1;
+}
