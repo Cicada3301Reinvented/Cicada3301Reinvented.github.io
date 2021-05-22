@@ -1102,11 +1102,11 @@ h5,
 .site-hero {
   margin-bottom: 4rem;
 }
-.site-hero,
+/* .site-hero,
 .site-hero .row {
   min-height: 700px;
   height: calc(100vh - 95px);
-}
+} */
 .site-hero.inner,
 .site-hero.inner .row {
   min-height: 400px;
