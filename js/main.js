@@ -158,6 +158,7 @@ setInterval(() => {
         0: {
           items: 1,
           nav: false,
+          autoplay: false,
         },
         600: {
           items: 2,
