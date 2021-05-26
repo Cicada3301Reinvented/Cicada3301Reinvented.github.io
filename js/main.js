@@ -126,6 +126,7 @@ setInterval(() => {
     timerHours.innerHTML = "00";
     timerMinutes.innerHTML = "00";
     timerSeconds.innerHTML = "00";
+    document.getElementById('join-us').style.display = "block";
   }
 }, 1000);
 
